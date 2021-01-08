@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { deleteTodo } from '../actions';
+import { deleteTodo, fetchTodos } from '../actions';
+
 
 class List extends Component {
     renderContent() {
         if(this.props.todos){
-           // console.log(this.props.todos.data[0]);
-            console.log(this.props.todos);
+            //this.props.dispatch(fetchTodos());
 
         switch (this.props.todos) {
             case null:

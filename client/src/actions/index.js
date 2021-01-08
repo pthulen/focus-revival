@@ -14,8 +14,8 @@ export const addTodo = (text) => async dispatch=> {
     }
     const res = await axios.post('/api/todos', newTodo);
 
-   // history.push('/todos')
-    dispatch({ type: 'ADD_TODO', payload: res.data})
+    //history.push('/todos')
+    dispatch({ type: 'ADD_TODO', payload: res.data});
 }
 
 
