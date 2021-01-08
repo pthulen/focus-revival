@@ -12,7 +12,6 @@ const AddTodo = (props) => (
             props.dispatch(addTodo(input))
             event.target.userInput.value = ''
 
-            console.log(input)
         }}>
             <input type="text" name="userInput" />
             <button className="form waves-effect waves-light btn">Submit</button>

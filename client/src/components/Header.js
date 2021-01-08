@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 
 class Header extends Component {
     renderContent() {
-        console.log(this.props)
+        if(this.props.auth){
+         //   console.log(this.props.auth._id);
+          }
         switch (this.props.auth) {
             case null:
                 return ;
@@ -49,7 +51,7 @@ class Header extends Component {
 
 
 function mapStateToProps({ auth }) {
-    return { auth };
+    return { auth }
 }
 
 export default connect(mapStateToProps)(Header);

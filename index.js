@@ -7,7 +7,7 @@ const keys = require('./config/keys');
 
 require('./models/user');
 //will needa model for todo data 
-// require('./models/survey');
+require('./models/todo');
 
 require('./services/passport');
 
@@ -30,6 +30,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoutes')(app);
+require('./routes/todoRoutes')(app);
 
 
 if (process.env.NODE_ENV === "production") {
