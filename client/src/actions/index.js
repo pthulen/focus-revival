@@ -14,7 +14,7 @@ export const addTodo = (text) => async dispatch=> {
     }
     const res = await axios.post('/api/todos', newTodo);
 
-    //history.push('/todos')
+    //history.push('/todos', newTodo);
     dispatch({ type: 'ADD_TODO', payload: res.data});
 }
 
@@ -24,7 +24,6 @@ export const deleteTodo = (id) => async dispatch =>{
     const currentId = {
         _id: id
     };
-    console.log(`action id: ${currentId}`);
     const res = await axios.put('/api/todos', currentId);
 
     dispatch({ type: 'DELETE_TODO', payload: res.data })

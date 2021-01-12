@@ -1,16 +1,11 @@
 {
   "name": "tasks-app",
   "version": "1.0.0",
-  "proxy": {
-    "/auth/google": {
-      "target": "http://localhost:5000"
-    }
-  },
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon index.js",
+    "server": "nodemon server.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"

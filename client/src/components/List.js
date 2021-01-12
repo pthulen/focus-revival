@@ -5,11 +5,9 @@ import * as actions from '../actions';
 
 
 class List extends Component {
-    updateTodosList(){
-        this.props.fetchTodos();
-    }
     renderContent() {
         if(this.props.todos){
+            
 
         switch (this.props.todos) {
             case null:
@@ -25,8 +23,8 @@ class List extends Component {
                             <br />
                             <button className="list red btn" onClick={()=> {
                                this.props.deleteTodo(todo._id);
-                                this.updateTodosList();
-                               
+                               this.props.todos.find(todoCurrent => todoCurrent._id === todo._id).completed = true;
+                                this.forceUpdate();
                             } }>Completed</button>
                         </li>
                 ))}

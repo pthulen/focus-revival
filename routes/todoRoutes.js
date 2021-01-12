@@ -14,7 +14,6 @@ module.exports = (app) => {
         }
     });
     app.post('/api/todos', async (req,res) => {
-        console.log(req.body);
         const { id, text, completed } = req.body; 
         
         const todo = new Todo({
@@ -33,11 +32,9 @@ module.exports = (app) => {
     });
 
     app.put('/api/todos', async (req, res) => {
-        console.log(req.body._id);
         const currentId = req.body._id
         const todoCurrent = await Todo.findOne({ _id: currentId })
         todoCurrent.completed = true;
-        console.log(todoCurrent);
         try {
             await todoCurrent.save();
             
