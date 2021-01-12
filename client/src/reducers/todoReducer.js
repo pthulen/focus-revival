@@ -15,7 +15,10 @@ export const todoReducer = (state= initialState, action) => {
             //     }]
             // }
         case 'FETCH_TODOS':
-            return action.payload;    
+            return action.payload;
+            
+        case 'DELETE_TODO':
+            return action.paylod;
         default: 
         return state;
        // filters out the during todo by id then returns the state without that todo (deletes it)

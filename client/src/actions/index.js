@@ -20,10 +20,15 @@ export const addTodo = (text) => async dispatch=> {
 
 
 
-export const deleteTodo = (id) => ({
-    type: 'DELETE_TODO',
-    id
-})
+export const deleteTodo = (id) => async dispatch =>{
+    const currentId = {
+        _id: id
+    };
+    console.log(`action id: ${currentId}`);
+    const res = await axios.put('/api/todos', currentId);
+
+    dispatch({ type: 'DELETE_TODO', payload: res.data })
+}
 
 export const fetchUser = () => async dispatch => {
     const res = await axios.get('/api/current_user')

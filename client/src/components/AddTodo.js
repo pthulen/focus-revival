@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
  
 class AddTodo extends Component {
-    componentDidUpdate() {
-        //fetches todos after input and updates list
-        this.props.fetchTodos();
-    }
+    // componentDidUpdate() {
+    //     //fetches todos after input and updates list
+    //     this.props.fetchTodos();
+    // }
     render() {
         return (
             <div className="container">

@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { deleteTodo, fetchTodos } from '../actions';
+import * as actions from '../actions';
+//import { deleteTodo } from '../actions';
 
 
 class List extends Component {
+    updateTodosList(){
+        this.props.fetchTodos();
+    }
     renderContent() {
         if(this.props.todos){
-            //this.props.dispatch(fetchTodos());
 
         switch (this.props.todos) {
             case null:
@@ -16,11 +19,15 @@ class List extends Component {
             default:
                 return (
                     <div>
-                        {this.props.todos.map((todo, _id) => todo.completed ? (<li key ={_id} style={{display: "none"}}></li>) : (
-                        <li className="section" key={_id}>
+                        {this.props.todos.map((todo) => todo.completed ? (<li key ={todo._id} style={{display: "none"}}></li>) : (
+                        <li className="section" key={todo._id}>
                             <span>{todo.text}</span>
                             <br />
-                            <button className="list red btn" onClick={()=> this.props.dispatch(deleteTodo(todo.id))}>Completed</button>
+                            <button className="list red btn" onClick={()=> {
+                               this.props.deleteTodo(todo._id);
+                                this.updateTodosList();
+                               
+                            } }>Completed</button>
                         </li>
                 ))}
                     </div>
@@ -43,5 +50,5 @@ const mapStateToProps = (state) => ({
       auth: state.auth,
       todos: state.todos
 })
-export default connect(mapStateToProps)(List);
+export default connect(mapStateToProps, actions)(List);
 
