@@ -36,3 +36,126 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  padding:0.3em 1.2em;
+  margin:0.3em 0.3em 0.3em 0.3em;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight:300;
+  color:#FFFFFF;
+  background-color:#4eb5f1;
+  text-align:center;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.logout a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.logout a {
+  padding:0.3em 1.2em;
+  margin:0.3em 0.3em 0.3em 0.3em;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight:300;
+  color:#222222;
+  background-color:#f1744e;
+  text-align:center;
+  transition: all 0.2s;
+}
+
+.link-logo {
+  font-size: 2em;
+  padding:0.2em 1.2em;
+  margin: 0.3em 0.3em 0.3em 0.3em;
+  /* border-radius:2em; */
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight:300;
+  color:#222222;
+  background-color:#f1744e;
+  text-align:center;
+  transition: all 0.2s;
+}
+html {
+  font-size: 16px;
+  background-color: grey;
+  list-style-type: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  padding: 1em;
+}
+
+.todo-list {
+  display: flex; 
+  flex-direction: column;
+}
+
+li {
+  display: inline-flex;
+  justify-content: center;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+nav {
+  display: inline;
+  margin-bottom: 1em;
+}
+.nav-wrapper {
+  width: 100%;
+  display: inline-flex;
+  margin-bottom: 2.5em;
+  justify-content: space-between;
+}
+
+/* .right {
+  float: right;
+} */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  margin: 1em 1em;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* keeps the card from being too large on large screens */
+@media screen and (min-width: 475px) {
+  .card {
+    width:50%;
+    align-self:center;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: flex-end;
+}
+.signed-out-message {
+  padding: 1.25em;
+}
+
+input {
+  margin: 1.05em;
+}

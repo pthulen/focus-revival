@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom';
 
 class Header extends Component {
     renderContent() {
-        if(this.props.auth){
-         //   console.log(this.props.auth._id);
-          }
+        // if(this.props.auth){
+        //  //   console.log(this.props.auth._id);
+        //   }
         switch (this.props.auth) {
             case null:
-                return ;
+                return <li className="logout" ><a href="/todos">Error</a></li>;
             case false:
                 return (
                     <li><a href="/auth/google" >Log In With Google</a></li>
                 );
             default:
                 return (
-                    <li key="2"><a href="/api/logout">Logout</a></li>
+                    <li key="2" className="logout"><a href="/api/logout">Logout</a></li>
                 );
         }
     }
@@ -30,20 +30,20 @@ class Header extends Component {
     // }
     render() {
         return (
-            <div>
-                <nav className="light-green darken-2">
+            <div className="container1">
+                <nav className="nav">
                     <div className="nav-wrapper" >
-                    <Link 
-                    to={this.props.auth ? '/todos' : '/'} 
-                    className=" left brand-logo" style={{ marginLeft: 10 }}>Todo App - Header</Link>
-                    <ul id="nav-mobile" className="hide-on-med-and-down right">
-                        {this.renderContent()}
-                    </ul>
+                        <Link 
+                        to={this.props.auth ? '/todos' : '/'} 
+                        className="link-logo" >Todo App</Link>
+                        <ul id="nav-mobile" className="right">
+                            {this.renderContent()}
+                        </ul>
                     </div>
                 </nav>
-                <ul className="sidenav right" id="mobile-demo">
+                {/* <ul className="sidenav right" id="test">
                     {this.renderContent()}
-                </ul>
+                </ul> */}
             </div>    
         );
     }
