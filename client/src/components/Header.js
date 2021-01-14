@@ -13,7 +13,7 @@ class Header extends Component {
                 return <li className="logout" ><a href="/todos">Error</a></li>;
             case false:
                 return (
-                    <li><a href="/auth/google" >Log In With Google</a></li>
+                    <li className="login" ><a href="/auth/google" >Log In With Google</a></li>
                 );
             default:
                 return (
