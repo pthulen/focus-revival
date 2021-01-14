@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 class Landing extends Component {
     render() {
         return (
-            <div className="header" style={{ textAlign: 'center', height: "40em" }} >
-                <div className="container" style={{ marginTop: "10em", backgroundColor: "orange", borderRadius: "50%", padding: "2em"}}>
-                    <h2>To Do</h2>
-                    <h4 style={{ paddingBottom: "1em" }}>Get shit done</h4>
+            <div className="container-landing" >
+                <div className="landing-content" >
+                    <h2> The Task App</h2>
+                    <h4>Get shit done</h4>
                 </div>
                 
             </div>

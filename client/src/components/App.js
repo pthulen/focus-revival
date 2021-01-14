@@ -23,10 +23,11 @@ class App extends Component {
       <BrowserRouter>
         <div className="fill" id="main" >
             <Header />
+          <div className="landing">
+          <Route exact path="/" component={Landing} />
+          </div>  
           <div className="todos">
-            <Route exact path="/" component={Landing} />
             <Route exact path="/todos" component={AddTodo} />
-            {/* <List /> */}
           </div>
             
         </div>

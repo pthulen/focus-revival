@@ -35,7 +35,7 @@ class Header extends Component {
                     <div className="nav-wrapper" >
                         <Link 
                         to={this.props.auth ? '/todos' : '/'} 
-                        className="link-logo" >Todo App</Link>
+                        className="link-logo" >Task App</Link>
                         <ul id="nav-mobile" className="right">
                             {this.renderContent()}
                         </ul>
