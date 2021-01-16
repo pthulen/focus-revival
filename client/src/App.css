@@ -97,6 +97,11 @@ button:hover {
   text-align:center;
   transition: all 0.2s;
 }
+
+.link-logo img {
+  height: 5em;
+  width: 5em;
+}
 html {
   font-size: 16px;
   background-color: #414C59;
@@ -211,4 +216,5 @@ input {
 .landing-content h4 {
   font-size: 1.25em;
 }
+
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 //import M from "materialize-css/dist/js/materialize.min.js";
+import logo from '../logo.png';
 
 class Header extends Component {
     renderContent() {
@@ -35,7 +36,7 @@ class Header extends Component {
                     <div className="nav-wrapper" >
                         <Link 
                         to={this.props.auth ? '/todos' : '/'} 
-                        className="link-logo" >Task App</Link>
+                        className="link-logo" ><img src={logo} alt="logo"></img></Link>
                         <ul id="nav-mobile" className="right">
                             {this.renderContent()}
                         </ul>
