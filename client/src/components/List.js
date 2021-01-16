@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-//import { deleteTodo } from '../actions';
 
 
 class List extends Component {
@@ -16,9 +15,9 @@ class List extends Component {
                 return (<div>Loading - undefined</div>);    
             default:
                 return (
-                    <div>
+                    <div className="todo-list">
                         {this.props.todos.map((todo) => todo.completed ? (<li key ={todo._id} style={{display: "none"}}></li>) : (
-                        <li className="section" key={todo._id}>
+                        <li className="todo-list1" key={todo._id}>
                             <span>{todo.text}</span>
                             <br />
                             <button className="list red btn" onClick={()=> {
@@ -32,7 +31,7 @@ class List extends Component {
                 );
         }
     } else {
-        return (<div>Sign in please</div>)
+        return (<div className="signed-out-message">Please sign in</div>)
     }
     }
 

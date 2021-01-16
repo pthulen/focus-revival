@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import List from './List';
  
 class AddTodo extends Component {
     // componentDidUpdate() {
@@ -9,7 +10,7 @@ class AddTodo extends Component {
     // }
     render() {
         return (
-            <div className="container">
+            <div className="container card">
                 <h2>Todo List</h2>
                 <form onSubmit={(event) => {
                     event.preventDefault()
@@ -20,8 +21,9 @@ class AddTodo extends Component {
                     this.props.fetchTodos();
                     }}>
                 <input type="text" name="userInput" />
-                <button className="form waves-effect waves-light btn">Submit</button>
+                <button className="form waves-effect waves-light btn">Add Task</button>
                 </form>
+                <List />
             </div>
         );
     }

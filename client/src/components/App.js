@@ -6,8 +6,9 @@ import * as actions from '../actions';
 import Landing from './Landing';
 import Header from './Header';
 import AddTodo from './AddTodo';
-import List from './List';
+//import List from './List';
 
+import '.././Normalize.css';
 import '.././App.css';
 
 class App extends Component {
@@ -20,11 +21,14 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="container">
-          <Header />
+        <div className="fill" id="main" >
+            <Header />
+          <div className="landing">
           <Route exact path="/" component={Landing} />
-          <Route exact path="/todos" component={AddTodo} />
-          <List />
+          </div>  
+          <div className="todos">
+            <Route exact path="/todos" component={AddTodo} />
+          </div>
             
         </div>
       
