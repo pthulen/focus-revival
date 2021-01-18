@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 const Todo = mongoose.model('todos');
 module.exports = (app) => {
     app.get('/api/todos', async (req, res) => {
-        const todos = await Todo.find({ _user: req.user.id });
+       // const todos = await Todo.find({ _user: req.user.id });
 
         try {
+            const todos = await Todo.find({ _user: req.user.id });
+
             res.send(todos);
             
         } catch (err) {
