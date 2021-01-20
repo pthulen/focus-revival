@@ -40,3 +40,9 @@ export const fetchUser = () => async dispatch => {
  
     dispatch({ type: 'FETCH_TODOS', payload: res.data });
  };
+
+ export const fetchLandingData = () => async dispatch => {
+    const res = await axios.get('/api/landingdata');
+ 
+    dispatch({ type: 'FETCH_LANDING_DATA', payload: res.data });
+ };

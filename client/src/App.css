@@ -1,6 +1,7 @@
-.App {
-  text-align: center;
+html, body, #root, .App {
+  height: 100%;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -107,11 +108,20 @@ html {
   background-color: #414C59;
   list-style-type: none;
   font-family: 'Montserrat', sans-serif;
-  background-image: url('https://images.pexels.com/photos/1183021/pexels-photo-1183021.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260');
+  /* background-image: url('https://images.pexels.com/photos/1183021/pexels-photo-1183021.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260');
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  letter-spacing: 2px; */
+}
+
+#main {
+  /* background-image: url('https://images.pexels.com/photos/1183021/pexels-photo-1183021.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260');
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
   letter-spacing: 2px;
 }
 
