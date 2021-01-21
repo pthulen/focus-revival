@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import List from './List';
+import Footer from './Footer';
  
 class AddTodo extends Component {
     // componentDidUpdate() {
@@ -24,6 +25,7 @@ class AddTodo extends Component {
                 <button className="form waves-effect waves-light btn">Add Task</button>
                 </form>
                 <List />
+                <Footer />
             </div>
         );
     }

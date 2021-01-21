@@ -6,7 +6,6 @@ import * as actions from '../actions';
 import Landing from './Landing';
 import Header from './Header';
 import AddTodo from './AddTodo';
-//import List from './List';
 
 import '.././Normalize.css';
 import '.././App.css';
@@ -16,6 +15,7 @@ class App extends Component {
     this.props.fetchUser();
     this.props.fetchTodos();
     this.props.fetchLandingData();
+    this.props.fetchQuote();
 }
   updateStyle() {
     if(this.props.landing) {
@@ -46,6 +46,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  landing: state.landing
+  landing: state.landing,
+  quote: state.quote
 })
 export default connect(mapStateToProps, actions)(App);

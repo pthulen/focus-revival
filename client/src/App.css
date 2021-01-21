@@ -108,12 +108,6 @@ html {
   background-color: #414C59;
   list-style-type: none;
   font-family: 'Montserrat', sans-serif;
-  /* background-image: url('https://images.pexels.com/photos/1183021/pexels-photo-1183021.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260');
-  height: 100%; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  letter-spacing: 2px; */
 }
 
 #main {
@@ -127,7 +121,7 @@ html {
 
 h2 {
   text-align: center;
-  padding: 1em;
+  padding: 0.25em;
   font-size: 2em;
 }
 
@@ -232,4 +226,25 @@ input {
   font-size: 1.25em;
 }
 
+/* footer styles */
 
+.footer {
+  display: block;
+  margin-top: 0.2em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 475px) {
+  .card {
+    height: 22em;
+  }
+  .footer {
+    margin-top: 0.8em;
+  }
+  
+}

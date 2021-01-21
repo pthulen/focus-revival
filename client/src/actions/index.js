@@ -46,3 +46,9 @@ export const fetchUser = () => async dispatch => {
  
     dispatch({ type: 'FETCH_LANDING_DATA', payload: res.data });
  };
+
+ export const fetchQuote = () => async dispatch => {
+    const res = await axios.get('/api/quote');
+ 
+    dispatch({ type: 'FETCH_QUOTE', payload: res.data });
+ };
