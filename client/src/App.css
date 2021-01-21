@@ -117,11 +117,11 @@ html {
 }
 
 #main {
-  /* background-image: url('https://images.pexels.com/photos/1183021/pexels-photo-1183021.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260');
+  /* background-image: url('https://images.pexels.com/photos/1183021/pexels-photo-1183021.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260'); */
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
   letter-spacing: 2px;
 }
 

@@ -11,52 +11,32 @@ import AddTodo from './AddTodo';
 import '.././Normalize.css';
 import '.././App.css';
 
-const backgroundStyle = {
-  backgroundImage: "url('https://images.pexels.com/photos/1183021/pexels-photo-1183021.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260')",
-  height: "100%", 
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover"
-}
-
 class App extends Component {
-  
   componentDidMount() {
     this.props.fetchUser();
     this.props.fetchTodos();
     this.props.fetchLandingData();
 }
-renderContent() {
-  if(this.props.landing){
-      
-
-  switch (this.props.landing) {
-      case null:
-          return (<div>Null</div>);  
-      case false:
-          return (<div>Loading - undefined</div>);    
-      default:
-          return (
-              <div className="image">
-                  {this.props.landing[0]}
-              </div>
-          );
+  updateStyle() {
+    if(this.props.landing) {
+      let randomElement = this.props.landing[Math.floor(Math.random() * this.props.landing.length)]
+      return {
+        backgroundImage: `url(${randomElement})`}
+    } else {
+      return { backgroundImage: "url('https://images.pexels.com/photos/3889990/pexels-photo-3889990.jpeg')"
+    }
+    }
   }
-} else {
-  return (<div className="signed-out-message">Please sign in</div>)
-}
-}
   render() {
     return (
       <BrowserRouter>
-        <div className="fill" id="main" style={backgroundStyle} >
+        <div className="fill" id="main" style={this.props.landing ? this.updateStyle() : { backgroundImage: "url('https://images.pexels.com/photos/3889990/pexels-photo-3889990.jpeg')" } }>
             <Header />
           <div className="landing">
           <Route exact path="/" component={Landing} />
           </div>  
           <div className="todos">
             <Route exact path="/todos" component={AddTodo} />
-            {this.renderContent()}
           </div>
         </div>
       
@@ -65,4 +45,7 @@ renderContent() {
   }
 }
 
-export default connect(null, actions)(App);
+const mapStateToProps = (state) => ({
+  landing: state.landing
+})
+export default connect(mapStateToProps, actions)(App);

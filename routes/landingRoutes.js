@@ -3,7 +3,7 @@ const keys = require("../config/keys");
 const fetch = require('node-fetch');
 
 const auth = keys.pexelsAPIkey;
-const url = "https://api.pexels.com/v1/search?query=nature&per_page=10";
+const url = "https://api.pexels.com/v1/search?query=mountains&per_page=10";
 
 module.exports = (app) => {
     app.get('/api/landingdata', async (req, res) => {
@@ -18,11 +18,8 @@ module.exports = (app) => {
                 return resp.json()
             }).then(data => {
                 data.photos.forEach(element => {
-                   // console.log(element.url);
-                    landingData.push(element.url);
+                    landingData.push(element.src.original);
                 });
-                //console.log(data.photos[0].url);
-                //landingData.push(data.photos[0].url);
                 
             });
             
