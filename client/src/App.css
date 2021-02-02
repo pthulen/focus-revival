@@ -204,6 +204,10 @@ nav {
   padding: 1.25em;
 }
 
+form {
+  display: flex;
+  justify-content: center;
+}
 input {
   margin: 1.05em;
 }
@@ -246,5 +250,16 @@ input {
   .footer {
     margin-top: 0.8em;
   }
+  .link-logo img {
+    height: 3em;
+    width: 3em;
+  }
+  .link-logo {
+    display: flex;
+    padding: 0.2em;
+    align-content: center;
+    justify-content: center;
+  }
+  
   
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import CheckCircle from '@material-ui/icons/CheckCircleOutline';
 
 
 class List extends Component {
@@ -20,11 +21,11 @@ class List extends Component {
                         <li className="todo-list1" key={todo._id}>
                             <span>{todo.text}</span>
                             <br />
-                            <button className="list red btn" onClick={()=> {
+                            <CheckCircle className="list btn" onClick={()=> {
                                this.props.deleteTodo(todo._id);
                                this.props.todos.find(todoCurrent => todoCurrent._id === todo._id).completed = true;
-                                this.forceUpdate();
-                            } }>Completed</button>
+                               setTimeout(this.forceUpdate(), 1000);
+                            } } />
                         </li>
                 ))}
                     </div>
