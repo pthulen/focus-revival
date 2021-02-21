@@ -6,12 +6,12 @@ import axios from 'axios';
 //     id: Math.random()
 // }); 
 
-export const addTodo = (text) => async dispatch=> {
+export const addTodo = (text, taskType) => async dispatch=> {
     const newTodo = {
         id: Math.random(),
         text,
         completed: false,
-        type: "daily"
+        type: taskType
     }
     const res = await axios.post('/api/todos', newTodo);
 

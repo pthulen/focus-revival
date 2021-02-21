@@ -5,7 +5,9 @@ import * as actions from '../actions';
 
 import Landing from './Landing';
 import Header from './Header';
-import AddTodo from './AddTodo';
+import AddTodoDaily from './AddTodoDaily';
+import AddTodoWeekly from './AddTodoWeekly';
+import Footer from './Footer';
 
 import '.././Normalize.css';
 import '.././App.css';
@@ -36,7 +38,11 @@ class App extends Component {
           <Route exact path="/" component={Landing} />
           </div>  
           <div className="todos">
-            <Route exact path="/todos" component={AddTodo} />
+            <div className="card-holder">
+            <Route exact path="/todos" component={AddTodoDaily} />
+            <Route exact path="/todos" component={AddTodoWeekly} />
+            </div>  
+            <Route exact path="/todos" component={Footer} />
           </div>
         </div>
       

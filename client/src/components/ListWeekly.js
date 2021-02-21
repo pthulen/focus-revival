@@ -5,23 +5,6 @@ import CheckCircle from '@material-ui/icons/CheckCircleOutline';
 
 
 class ListWeekly extends Component {
-    // filterList() {
-    //     let unfinished = [];
-    //     let weeklyTasks = [];
-    //     this.props.todos.map((todo) => {
-    //         if(todo.completed === false){
-    //             unfinished.push(todo);
-    //     }
-    // });
-    //     unfinished.map((todo) =>{
-    //         if(todo.type === "weekly"){
-    //             weeklyTasks.push(todo);
-    //         }
-    //     })
-
-    //     return weeklyTasks;
-
-    // }
     renderContent() {
         let weeklyTodos = [];
         if(this.props.todos){
