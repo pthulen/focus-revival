@@ -16,12 +16,13 @@ module.exports = (app) => {
         }
     });
     app.post('/api/todos', async (req,res) => {
-        const { id, text, completed } = req.body; 
+        const { id, text, completed, type } = req.body; 
         
         const todo = new Todo({
             id,
             text,
             completed,
+            type,
             _user: req.user.id,
         })
 

@@ -4,10 +4,15 @@ import * as actions from '../actions';
 import CheckCircle from '@material-ui/icons/CheckCircleOutline';
 
 
-class List extends Component {
+class ListDaily extends Component {
     renderContent() {
+        let dailyTodos = [];
         if(this.props.todos){
-            
+            this.props.todos.forEach((todo) => {
+                if(todo.type === "daily"){
+                    dailyTodos.push(todo);
+                }
+            });
 
         switch (this.props.todos) {
             case null:
@@ -17,7 +22,7 @@ class List extends Component {
             default:
                 return (
                     <div className="todo-list">
-                        {this.props.todos.map((todo) => todo.completed ? (<li key ={todo._id} style={{display: "none"}}></li>) : (
+                        {dailyTodos.map((todo) => todo.completed ? (<li key ={todo._id} style={{display: "none"}}></li>) : (
                         <li className="todo-list1" key={todo._id}>
                             <span>{todo.text}</span>
                             <br />
@@ -48,5 +53,5 @@ const mapStateToProps = (state) => ({
       auth: state.auth,
       todos: state.todos
 })
-export default connect(mapStateToProps, actions)(List);
+export default connect(mapStateToProps, actions)(ListDaily);
 

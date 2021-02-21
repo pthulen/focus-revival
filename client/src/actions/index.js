@@ -10,7 +10,8 @@ export const addTodo = (text) => async dispatch=> {
     const newTodo = {
         id: Math.random(),
         text,
-        completed: false
+        completed: false,
+        type: "daily"
     }
     const res = await axios.post('/api/todos', newTodo);
 

@@ -5,6 +5,7 @@ const todoSchema = new Schema({
     id: Number,
     text: String,
     completed: Boolean,
+    type: String,
     _user: { type: Schema.Types.ObjectId, ref: 'User' },
 });
 
