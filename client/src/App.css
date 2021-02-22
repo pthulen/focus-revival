@@ -289,6 +289,19 @@ input {
   
 }
 
+/* adjusts task lists on very small screens */
+@media screen and (max-width: 395px) {
+  form {
+    flex-direction: column;
+    justify-content: center;
+  }
+  input {
+    width: 80%;
+  }
+  
+  
+}
+
 /* puts task cards in column on smaller screens */
 @media screen and (max-width: 680px) {
   .card-holder {
