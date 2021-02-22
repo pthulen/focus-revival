@@ -5,8 +5,10 @@ class Landing extends Component {
         return (
             <div className="container-landing" >
                 <div className="landing-content" >
-                    <h2> The Task App</h2>
-                    <h4>Get shit done</h4>
+                    <h2>Focus Revival</h2>
+                    <h4>Track tasks.</h4>
+                    <h4>Find your focus.</h4>
+                    <h4>Get stuff done.</h4>
                 </div>
                 
             </div>
