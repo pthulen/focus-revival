@@ -14,7 +14,7 @@ class AddTodoDaily extends Component {
         return (
             
                 <div className="container card">
-                    <h2>Todo List - Daily</h2>
+                    <h2>Daily Tasks</h2>
                     <form onSubmit={(event) => {
                         event.preventDefault()
 

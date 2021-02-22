@@ -15,7 +15,7 @@ class AddTodoWeekly extends Component {
             
                 
             <div className="container card">
-                <h2>Todo List - Weekly</h2>
+                <h2>Weekly Tasks</h2>
                     <form onSubmit={(event) => {
                         event.preventDefault()
 
