@@ -34,9 +34,9 @@ class AddTodoWeekly extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return state
-}
+const mapStateToProps = (state) => ({
+    todos: state.todos
+})
 
 
 
