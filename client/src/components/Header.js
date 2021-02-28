@@ -1,14 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-//import M from "materialize-css/dist/js/materialize.min.js";
 import logo from '../logo.png';
+import Modal from './Modal';
 
 class Header extends Component {
+    constructor() {
+        super();
+        this.state = {
+          show: false
+        };
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
+      }
+    
+      showModal = () => {
+        this.setState({ show: true });
+      };
+    
+      hideModal = () => {
+        this.setState({ show: false });
+      };
+
     renderContent() {
-        // if(this.props.auth){
-        //  //   console.log(this.props.auth._id);
-        //   }
+       
         switch (this.props.auth) {
             case null:
                 return <li className="logout" ><a href="/todos">Error</a></li>;
@@ -22,13 +37,7 @@ class Header extends Component {
                 );
         }
     }
-    // componentDidMount() {
-    //     var elem = document.querySelector(".sidenav");
-    //     var instance = M.Sidenav.init(elem, {
-    //         edge: "left",
-    //         inDuration: 250
-    //     });
-    // }
+   
     render() {
         return (
             <div className="container1">
@@ -37,14 +46,21 @@ class Header extends Component {
                         <Link 
                         to={this.props.auth ? '/todos' : '/'} 
                         className="link-logo" ><img src={logo} alt="logo"></img></Link>
+                        <button className="btn" onClick={this.showModal}>Info</button>
                         <ul id="nav-mobile" className="right">
                             {this.renderContent()}
                         </ul>
                     </div>
                 </nav>
-                {/* <ul className="sidenav right" id="test">
-                    {this.renderContent()}
-                </ul> */}
+                <Modal show={this.state.show} handleClose={this.hideModal}>
+                        <div className="modal-content">
+                            <h3>Welcome to Focus Revival</h3>
+                            <p>To begin, sign in with your google account</p>
+                            <p>Once signed in, add tasks to your weekly or daily lists</p>
+                            <p>Click the Focus Revial logo to refresh lists if needed</p>
+                            <p>After you complete the task, click on the check mark to remove the task</p>
+                        </div>
+                </Modal>
             </div>    
         );
     }
