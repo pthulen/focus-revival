@@ -5,8 +5,7 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 
-require('./models/user');
-//will needa model for todo data 
+require('./models/user'); 
 require('./models/todo');
 
 require('./services/passport');
