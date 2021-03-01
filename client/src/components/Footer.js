@@ -7,19 +7,12 @@ const quote = {
     author: "Abraham Lincoln"
     }
 class Footer extends Component {
-    async componentDidMount() {
-        const response = await fetch(`https://goquotes-api.herokuapp.com/api/v1/random?count=1&tag=motivational`);
-        const json = await response.json();
-        console.log(json.quotes[0].text);
-      }
      renderContent() {
         if(this.props.quote) {
-            console.log(this.props.quote);
-        //let randomElement = this.props.quote[Math.floor(Math.random() * this.props.quote.length)]
             return (
                 <div>
-                    <p>{this.props.quote.content}</p> 
-                    <p>{this.props.quote.author}</p> 
+                    <p>{this.props.quote[0].q}</p> 
+                    <p>{this.props.quote[0].a}</p> 
                 </div>   
                 )
         } else {

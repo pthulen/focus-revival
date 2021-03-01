@@ -26,7 +26,7 @@ module.exports = (app) => {
             res.send(landingData);
             
         } catch (err) {
-            res.status(418).send(err);
+            res.status(400).send(err);
         }
     });
 

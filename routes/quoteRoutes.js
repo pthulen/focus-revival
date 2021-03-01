@@ -4,7 +4,7 @@ module.exports = (app) => {
     app.get('/api/quote', async (req, res) => {
         try {
             
-            let quote  = await fetch("https://api.quotable.io/random?tags=technology,famous-quotes")
+            let quote  = await fetch("https://zenquotes.io/api/random")
             .then(response => {
               return response.json();
             })
