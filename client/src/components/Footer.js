@@ -13,6 +13,7 @@ class Footer extends Component {
                 <div>
                     <p>{this.props.quote[0].q}</p> 
                     <p>{this.props.quote[0].a}</p> 
+                    <p>Quotes By <a className="zenquotes" href="https://zenquotes.io/" target="_blank" rel="noreferrer">ZenQuotes API</a></p>
                 </div>   
                 )
         } else {
