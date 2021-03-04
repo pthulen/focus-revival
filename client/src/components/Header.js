@@ -57,7 +57,7 @@ class Header extends Component {
                             <h3>Welcome to Focus Revival</h3>
                             <p>To begin, sign in with your google account</p>
                             <p>Once signed in, add tasks to your weekly or daily lists</p>
-                            <p>Click the Focus Revivial logo to refresh lists if needed</p>
+                            <p>Click the Focus Revival logo to refresh lists if needed</p>
                             <p>After you complete the task, click on the check mark to remove the task</p>
                         </div>
                 </Modal>

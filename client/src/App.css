@@ -78,7 +78,6 @@ html {
 }
 
 #main {
-  /* background-image: url('https://images.pexels.com/photos/1183021/pexels-photo-1183021.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260'); */
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
@@ -86,6 +85,7 @@ html {
   letter-spacing: 2px;
   overflow: hidden;
   overflow-y: scroll;
+
 }
 
 h2 {
@@ -126,10 +126,6 @@ nav {
 a:link {
   color: #414C59;
 }
-
-/* .right {
-  float: right;
-} */
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

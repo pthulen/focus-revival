@@ -20,12 +20,14 @@ class App extends Component {
     this.props.fetchQuote();
 }
   updateStyle() {
+    //Once the background image urls are fetched this fx randomly picks one and sets it to the background with a gradient
     if(this.props.landing) {
       let randomElement = this.props.landing[Math.floor(Math.random() * this.props.landing.length)]
       return {
-        backgroundImage: `url(${randomElement})`}
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(${randomElement})` 
+      }
     } else {
-      return { backgroundImage: "url('https://images.pexels.com/photos/3889990/pexels-photo-3889990.jpeg')"
+      return { backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('https://images.pexels.com/photos/3889990/pexels-photo-3889990.jpeg')"
     }
     }
   }
