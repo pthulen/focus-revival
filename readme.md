@@ -4,7 +4,7 @@
 Focus Revival is a task tracking application to help users follow their daily and weekly todos. 
 Users are able to sign in via Google Oauth then input their daily and weekly tasks. Users inputs are persistent and saved in a MongoDB database on AWS servers. Completed tasks are marked by the user and removed from the lists. 
 
-On larger screens, logged in users are greeted with random inspirational quotes fetched from an API. 
+On larger screens, logged in users are greeted with random inspirational quotes fetched from [Zenquotes.io API](www.zenquotes.io). 
 
 A variety of landscape photos are used for the background and fetched from the [Pexels API](https://www.pexels.com/api/). 
 
