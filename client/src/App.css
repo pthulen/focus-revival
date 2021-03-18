@@ -8,7 +8,8 @@ html, body, #root, .App {
 button {
   padding:0.3em 1.2em;
   margin:0.3em 0.5em 0.3em 0.3em;
-  border-radius:30px 0 30px 0;
+  border-radius:30px 30px 30px 30px;
+  border:0.16em solid #FFFFFF;
   box-sizing: border-box;
   text-decoration:none;
   font-weight:300;
@@ -30,6 +31,7 @@ button:hover {
 .login a {
   padding:0.3em 1.2em;
   margin:0.3em 0.3em 0.3em 0.3em;
+  border:0.16em solid #FFFFFF;
   border-radius:2em;
   box-sizing: border-box;
   text-decoration:none;
@@ -42,6 +44,7 @@ button:hover {
 .logout a {
   padding:0.3em 1.2em;
   margin:0.3em 0.3em 0.3em 0.3em;
+  border:0.16em solid #FFFFFF;
   border-radius:2em;
   box-sizing: border-box;
   text-decoration:none;
