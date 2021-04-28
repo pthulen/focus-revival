@@ -49,6 +49,7 @@ class Header extends Component {
                         <button className="btn" onClick={this.showModal}>Info</button>
                         <ul id="nav-mobile" className="right">
                             {this.renderContent()}
+                            <button className="btn" onClick={this.showModal}>Info</button>
                         </ul>
                     </div>
                 </nav>
