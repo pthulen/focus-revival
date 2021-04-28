@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import ListWeekly from './ListWeekly';
+import ListCompletedWeekly from './ListCompletedWeekly';
  
 class AddTodoWeekly extends Component {
     // componentDidUpdate() {
@@ -28,6 +29,7 @@ class AddTodoWeekly extends Component {
                     <button className="form btn">Add Task</button>
                     </form>
                     <ListWeekly />
+                    <ListCompletedWeekly />    
             </div>
             
         );

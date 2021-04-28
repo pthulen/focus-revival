@@ -334,3 +334,7 @@ input {
 .modal-btn {
   margin: 0.9em;
 }
+
+.hidden {
+  display: none;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import ListDaily from './ListDaily';
+import ListCompletedDaily from './ListCompletedDaily';
  
 class AddTodoDaily extends Component {
     // componentDidUpdate() {
@@ -27,6 +28,7 @@ class AddTodoDaily extends Component {
                     <button className="form btn">Add Task</button>
                     </form>
                     <ListDaily />
+                    <ListCompletedDaily />
                 </div>
            
             
