@@ -46,9 +46,9 @@ class Header extends Component {
                         <Link 
                         to={this.props.auth ? '/todos' : '/'} 
                         className="link-logo" ><img src={logo} alt="logo"></img></Link>
-                        <button className="btn" onClick={this.showModal}>Info</button>
                         <ul id="nav-mobile" className="right">
                             {this.renderContent()}
+                            <button className="btn" onClick={this.showModal}>Info</button>
                         </ul>
                     </div>
                 </nav>

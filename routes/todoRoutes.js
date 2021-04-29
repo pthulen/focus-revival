@@ -37,7 +37,8 @@ module.exports = (app) => {
     app.put('/api/todos', async (req, res) => {
         const currentId = req.body._id
         const todoCurrent = await Todo.findOne({ _id: currentId })
-        todoCurrent.completed = true;
+        const toggleCompleted = todoCurrent.completed;
+        todoCurrent.completed = !toggleCompleted;
         try {
             await todoCurrent.save();
             
