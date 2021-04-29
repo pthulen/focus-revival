@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import CheckCircle from '@material-ui/icons/CheckCircleOutline';
+import BackSpace from '@material-ui/icons/Backspace'
+
 
 
 class ListDaily extends Component {
@@ -31,14 +32,14 @@ class ListDaily extends Component {
                     <div className="todo-list">
                         <button
                         onClick={() => this.setState({showCompleted: !this.state.showCompleted})}>{showCompleted ? "Hide Completed" : "Show Completed"}</button>
-                        {dailyTodos.map((todo) => todo.completed ? (<li key ={todo._id} style={{display: "none"}}></li>) : (
+                        {dailyTodos.map((todo) => !todo.completed ? (<li key ={todo._id} style={{display: "none"}}></li>) : (
                         <li className={showCompleted ? "todo-list1" : "hidden"} key={todo._id}>
                             <span>{todo.text}</span>
                             <br />
-                            <CheckCircle className="list btn" onClick={()=> {
+                            <BackSpace className="list btn" onClick={()=> {
                                this.props.deleteTodo(todo._id);
-                               this.props.todos.find(todoCurrent => todoCurrent._id === todo._id).completed = true;
-                               setTimeout(this.forceUpdate(), 1000);
+                               this.props.todos.find(todoCurrent => todoCurrent._id === todo._id).completed = false;
+                               setTimeout(this.forceUpdate(), 500);
                             } } />
                         </li>
                 ))}
