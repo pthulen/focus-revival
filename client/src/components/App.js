@@ -44,8 +44,8 @@ class App extends Component {
             <Route exact path="/todos" component={AddTodoDaily} />
             <Route exact path="/todos" component={AddTodoWeekly} />
             </div>  
-            <Route exact path="/todos" component={Footer} />
           </div>
+          <Route exact path="/todos" component={Footer} />
         </div>
       
       </BrowserRouter>
