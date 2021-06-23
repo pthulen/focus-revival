@@ -5,11 +5,6 @@ import ListDaily from './ListDaily';
 import ListCompletedDaily from './ListCompletedDaily';
  
 class AddTodoDaily extends Component {
-    // componentDidUpdate() {
-    //     //fetches todos after input and updates list
-    //     this.props.fetchTodos();
-    // }
-    
     render() {
         const taskType = "daily";
         return (
@@ -25,7 +20,7 @@ class AddTodoDaily extends Component {
                         this.props.fetchTodos();
                         }}>
                     <input type="text" name="userInput" />
-                    <button className="form btn">Add Task</button>
+                    <button className="form btn">Submit</button>
                     </form>
                     <ListDaily />
                     <ListCompletedDaily />

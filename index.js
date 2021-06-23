@@ -11,7 +11,7 @@ require('./models/todo');
 require('./services/passport');
 
 
-
+console.log(keys.mongoURI)
 //connects to mongoDB db with mongoose
 mongoose.connect(keys.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
